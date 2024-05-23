@@ -16,8 +16,16 @@ public abstract class Pet extends Animal {
         return ownerName;
     }
 
+    public void setOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+    }
+
     public String getFavoriteTreat() {
         return favoriteTreat;
+    }
+
+    public void setFavoriteTreat(String favoriteTreat) {
+        this.favoriteTreat = favoriteTreat;
     }
 
     public abstract String performCommand(String command);

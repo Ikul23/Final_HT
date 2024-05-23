@@ -5,8 +5,8 @@ import java.util.Date;
 public class Donkey extends PackAnimal {
     private int earLength;
 
-    public Donkey(String name, Date birthDate, int carryingCapacity, int herdSize, int earLength) {
-        super(name, birthDate, carryingCapacity, herdSize, "Donkey");
+    public Donkey(String name, Date birthDate, String species, int carryingCapacity, int herdSize, int earLength) {
+        super(name, birthDate, species, carryingCapacity, herdSize);
         this.earLength = earLength;
     }
 
@@ -18,32 +18,32 @@ public class Donkey extends PackAnimal {
         this.earLength = earLength;
     }
 
-    @Override
-    public String move() {
-        return "Идет медленным шагом";
+    public String bray() {
+        return "Осел издает ишачий крик!";
     }
 
     @Override
-    public String makeSound() {
-        return "Издает ишачий крик";
+    public String voice() {
+        return bray();
     }
 
     @Override
     public String eat() {
-        return "Ест траву и сено";
+        return "Осел ест траву.";
+    }
+
+    @Override
+    public String move() {
+        return "Осел идет.";
     }
 
     @Override
     public String carryLoad(int weight) {
-        if (weight <= getCarryingCapacity()) {
-            return "Переносит груз весом " + weight + " кг.";
-        } else {
-            return "Не может перенести груз весом " + weight + " кг.";
-        }
+        return weight <= getCarryingCapacity() ? "Осел несет груз." : "Груз слишком тяжел для осла.";
     }
 
     @Override
     public String moveInHerd() {
-        return "Двигается вместе со стадом";
+        return "Осел идет в стаде.";
     }
 }

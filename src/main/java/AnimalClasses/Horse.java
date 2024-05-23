@@ -5,8 +5,8 @@ import java.util.Date;
 public class Horse extends PackAnimal {
     private String color;
 
-    public Horse(String name, Date birthDate, int carryingCapacity, int herdSize, String color) {
-        super(name, birthDate, carryingCapacity, herdSize, "Horse");
+    public Horse(String name, Date birthDate, String species, int carryingCapacity, int herdSize, String color) {
+        super(name, birthDate, species, carryingCapacity, herdSize);
         this.color = color;
     }
 
@@ -18,32 +18,36 @@ public class Horse extends PackAnimal {
         this.color = color;
     }
 
-    @Override
-    public String move() {
-        return "Бежит галопом";
+    public String gallop() {
+        return "Лошадь скачет!";
+    }
+
+    public String neigh() {
+        return "Лошадь ржет!";
     }
 
     @Override
-    public String makeSound() {
-        return "Ржёт";
+    public String voice() {
+        return neigh();
     }
 
     @Override
     public String eat() {
-        return "Ест сено";
+        return "Лошадь ест сено.";
+    }
+
+    @Override
+    public String move() {
+        return "Лошадь бегает.";
     }
 
     @Override
     public String carryLoad(int weight) {
-        if (weight <= getCarryingCapacity()) {
-            return "Переносит груз весом " + weight + " кг.";
-        } else {
-            return "Не может перенести груз весом " + weight + " кг.";
-        }
+        return weight <= getCarryingCapacity() ? "Лошадь несет груз." : "Груз слишком тяжел для лошади.";
     }
 
     @Override
     public String moveInHerd() {
-        return "Двигается вместе с табуном";
+        return "Лошадь идет в стаде.";
     }
 }

@@ -3,51 +3,46 @@ package AnimalClasses;
 import java.util.Date;
 
 public class Camel extends PackAnimal {
-    private int humpCount;
+    private int numberOfHumps;
 
-    public Camel(String name, Date birthDate, int carryingCapacity, int herdSize, int humpCount) {
-        super(name, birthDate, carryingCapacity, herdSize, "Camel");
-        this.humpCount = humpCount;
+    public Camel(String name, Date birthDate, String species, int carryingCapacity, int herdSize, int numberOfHumps) {
+        super(name, birthDate, species, carryingCapacity, herdSize);
+        this.numberOfHumps = numberOfHumps;
     }
 
-    public int getHumpCount() {
-        return humpCount;
+    public int getNumberOfHumps() {
+        return numberOfHumps;
     }
 
-    public void setHumpCount(int humpCount) {
-        this.humpCount = humpCount;
+    public void setNumberOfHumps(int numberOfHumps) {
+        this.numberOfHumps = numberOfHumps;
+    }
+
+    public String carryLoad() {
+        return "Верблюд несет груз.";
+    }
+
+    public String spit() {
+        return "Верблюд плюется.";
     }
 
     @Override
-    public String move() {
-        return "Идет по пустыне";
-    }
-
-    @Override
-    public String makeSound() {
-        return "Издает характерный верблюжий звук";
+    public String voice() {
+        return "Верблюд рычит.";
     }
 
     @Override
     public String eat() {
-        return "Ест траву и колючки";
+        return "Верблюд ест колючки.";
     }
 
     @Override
-    public String carryLoad(int weight) {
-        if (weight <= getCarryingCapacity()) {
-            return "Переносит груз весом " + weight + " кг.";
-        } else {
-            return "Не может перенести груз весом " + weight + " кг.";
-        }
+    public String move() {
+        return "Верблюд идет медленно.";
     }
 
     @Override
     public String moveInHerd() {
-        return "Двигается вместе со стадом";
-    }
-
-    public String spit() {
-        return "Плюется";
+        return "Верблюд идет в стаде.";
     }
 }

@@ -28,5 +28,6 @@ public abstract class PackAnimal extends Animal {
         this.herdSize = herdSize;
     }
 
+    public abstract String carryLoad(int weight);
     public abstract String moveInHerd();
 }
