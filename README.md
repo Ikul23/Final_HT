@@ -30,19 +30,25 @@
 
 ## Навигация по папкам проекта:
 
-### Решение задач для Linux и MySQL (файл:final_ht.pdf):
+ Решение задач 1-7 для Linux и MySQL (файл:final_ht.pdf):
+  https://github.com/Ikul23/Final_HT/blob/main/final_ht.pdf
 
-### Реализация диаграммы классов в Draw.io (файл: Диаграмма_классов.drawio):
+ Реализация диаграммы классов в Draw.io (файл: Диаграмма_классов.drawio):
+ https://github.com/Ikul23/Final_HT/blob/main/classes__diagram.drawio
 
-### Реализация задачи по ООП в JAVA
+ Реализация задачи по ООП в JAVA:
 
 Пакет классов:
+ https://github.com/Ikul23/Final_HT/tree/main/src/main/java/AnimalClasses
 
 Реализация собственных исключений:
+ https://github.com/Ikul23/Final_HT/tree/main/src/main/java/Exeptions
 
 Реализация проекта в паттерне MVC:
+ https://github.com/Ikul23/Final_HT/tree/main/src/main/java/MVC
 
-Реализация пользовательского интерфейса в классе Main: https://github.com/Ikul23/Pnonebook/blob/main/src/main/java/Phone_Book_MVC/Main.java
+Реализация пользовательского интерфейса в классе Main:
+https://github.com/Ikul23/Final_HT/blob/main/src/main/java/Main.java
 
 
 ##Описание структуры проекта, классов и методов:
