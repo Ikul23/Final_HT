@@ -51,8 +51,5 @@ public class Cat extends Pet {
         return "Кошка мурлычет!";
     }
 
-    @Override
-    public String makeSound() {
-        return purr();
-    }
+
 }

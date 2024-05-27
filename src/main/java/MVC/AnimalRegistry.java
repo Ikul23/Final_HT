@@ -1,31 +1,36 @@
 package MVC;
-import AnimalClasses.Animal;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import AnimalClasses.*;
+
+
+import java.util.*;
 
 public class AnimalRegistry {
-    private List<Animal> animals;
-
-    public AnimalRegistry() {
-        animals = new ArrayList<>();
-    }
+    private List<Animal> animals = new ArrayList<>();
+    private int animalCount = 0;
 
     public void addAnimal(Animal animal) {
         animals.add(animal);
+        animalCount++;
     }
 
     public List<Animal> getAnimals() {
         return animals;
     }
 
-    public List<Animal> getAnimalsByBirthDate() {
-        animals.sort((a1, a2) -> a1.getBirthDate().compareTo(a2.getBirthDate()));
+    public Animal getAnimalByName(String name) throws Exception {
+        return animals.stream()
+                .filter(animal -> animal.getName().equals(name))
+                .findFirst()
+                .orElseThrow(() -> new Exception("Animal not found"));
+    }
+
+    public List<Animal> getAnimalsSortedByBirthDate() {
+        animals.sort(Comparator.comparing(Animal::getBirthDate));
         return animals;
     }
 
     public int getAnimalCount() {
-        return animals.size();
+        return animalCount;
     }
 }

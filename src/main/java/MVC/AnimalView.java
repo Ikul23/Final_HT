@@ -1,4 +1,5 @@
 package MVC;
+
 import AnimalClasses.Animal;
 import Exeptions.InvalidAnimalTypeException;
 
@@ -109,7 +110,7 @@ public class AnimalView {
 
     public String getCommand() {
         System.out.print("Введите команду: ");
-        scanner.nextLine(); // consume newline
+        scanner.nextLine();
         return scanner.nextLine();
     }
 
@@ -125,5 +126,20 @@ public class AnimalView {
             Animal animal = animals.get(i);
             System.out.println(i + ": " + animal.getName() + ", " + animal.getSpecies() + ", " + animal.getBirthDate());
         }
+    }
+
+    public void displayAnimalDetails(Animal animal) {
+        System.out.println("Информация о животном:");
+        System.out.println("Имя: " + animal.getName());
+        System.out.println("Вид: " + animal.getSpecies());
+        System.out.println("Дата рождения: " + animal.getBirthDate());
+    }
+
+    public void displayMessage(String message) {
+        System.out.println(message);
+    }
+
+    public void displayAnimalCount(int count) {
+        System.out.println("Общее количество животных: " + count);
     }
 }

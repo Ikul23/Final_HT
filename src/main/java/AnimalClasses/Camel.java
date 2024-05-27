@@ -42,6 +42,11 @@ public class Camel extends PackAnimal {
     }
 
     @Override
+    public String carryLoad(int weight) {
+        return weight <= getCarryingCapacity() ? "Верблюд несет груз." : "Груз слишком тяжел для верблюда.";
+    }
+
+    @Override
     public String moveInHerd() {
         return "Верблюд идет в стаде.";
     }

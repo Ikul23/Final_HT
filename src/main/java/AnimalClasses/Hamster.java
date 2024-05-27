@@ -51,8 +51,5 @@ public class Hamster extends Pet {
         return "Хомяк пищит!";
     }
 
-    @Override
-    public String makeSound() {
-        return voice();
-    }
+
 }
